@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- SCRIPT -->
+{% block script %}
+{% endblock %}
+
+<!-- TITLE -->
+{% block title %}
+  My Projects
+{% endblock %}
+
+<!-- CSS -->
+{% block css %}
+  <link rel="stylesheet" href="{% static "portfolio/project.css" %}">
+  <link rel="stylesheet" href="{% static "portfolio/all-projects.css" %}">
+{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+  <section id="all-projects">
+    <h1>
+      My Projects
+    </h1>
+
+    <div id="header-projects-separator">
+    </div>
+    
+    <ul id="all-projects-list">
+      {% for p in projects %}
+          {% include "portfolio/includes/project.html" %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}

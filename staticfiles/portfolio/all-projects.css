@@ -1,0 +1,107 @@
+/*
+#EEEEEE;
+#393E46;
+#222831;
+#00ADB5;
+*/
+
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+#all-projects {
+  width: 100%;
+  height: 100%;
+  row-gap: 0;
+  text-align: center;
+  background-color: var(--dgray);
+}
+
+#all-projects h1,
+#all-projects h3,
+#all-projects h5 {
+  color: var(--dgray);
+}
+
+#all-projects h1 {
+  background-color: var(--creamy);
+  font-size: var(--h1s);
+  padding: 65px 5px 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#all-projects h2 {
+  font-size: var(--h2s);
+}
+
+#all-projects h3 {
+  font-size: var(--h3s);
+}
+
+#all-projects h4 {
+  font-size: var(--h4s);
+}
+
+#all-projects p {
+  font-size: var(--ps);
+}
+
+#header-projects-separator {
+  width: 100%;
+  min-height: 80px;
+  background-image: linear-gradient(var(--creamy) 50%, var(--dgray) 60%);
+}
+
+#all-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--dgray);
+  padding: 35px 0 35px;
+  width: auto;
+}
+
+#all-projects-list li h3,
+#all-projects-list li h4,
+#all-projects-list li p {
+  color: var(--dgray);
+}
+
+#all-projects-list ul {
+  width: 90%;
+  min-height: 260px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+#project {
+  background-color: var(--creamy);
+}
+
+#all-projects-list li:hover {
+  box-shadow: 0 0 20px 10px var(--turquoise);
+}
+
+#all-projects-list h3 {
+  font-size: var(--proj_h3);
+}
+
+#all-projects-list h4 {
+  font-size: var(--proj_h4);
+}
+
+#all-projects-list h5 {
+  font-size: var(--proj_h5);
+}
+
+#all-projects-list p {
+  font-size: var(--proj_p);
+}

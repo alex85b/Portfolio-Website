@@ -1,0 +1,522 @@
+/*###########################################################################################*/
+/*################################ project-details-section ##################################*/
+/*###########################################################################################*/
+
+/*
+#EEEEEE;
+#393E46;
+#222831;
+#00ADB5;
+*/
+
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+.project-details-section {
+  /* As a Child */
+  width: 100%;
+  /* align-self: stretch; */
+
+  /* As a Father */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*###########################################################################################*/
+/*################################ error-notice #############################################*/
+/*###########################################################################################*/
+
+#error-notice {
+  background-color: var(--creamy);
+}
+
+#error-text-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 30px auto 0;
+  background-color: var(--gray);
+  padding: 10px;
+  border-radius: 40px;
+  border: 10px solid #d45454ee;
+}
+
+#error-notice h5 {
+  font-size: var(--h5s);
+  font-family: 'Montserrat', sans-serif;
+  color: #d45454ee;
+}
+
+#error-notice p {
+  font-size: var(--ps);
+  font-family: 'Montserrat', sans-serif;
+  color: #ee7b7bee;
+}
+
+#thinking-face-imoji {
+  width: 70px;
+  filter: brightness(0) saturate(100%) invert(81%) sepia(66%) saturate(3908%) hue-rotate(310deg) brightness(96%) contrast(94%);
+  display: inline;
+}
+
+#error-notice a {
+  /* color: #ee7b7bee; */
+  color: var(--turquoise);
+  display: block;
+  font-size: var(--as);
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+#error-notice a:hover {
+  /* color: var(--turquoise) */
+  color: var(--creamy);
+}
+
+/*###########################################################################################*/
+/*################################ project-introduction #####################################*/
+/*###########################################################################################*/
+
+#project-introduction {
+  background-color: var(--creamy);
+  padding: 65px 0 0;
+  color: var(--gray);
+}
+
+#image-links-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  justify-items: center;
+  gap: 15px;
+}
+
+#links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+#links-container a {
+  text-align: center;
+  vertical-align: top;
+  color: var(--gray);
+  animation: 2s;
+  transition: transform 0.1s;
+  /* border-radius: 60px; */
+  /* background-color: var(--gray); */
+  /* width: 110px; */
+  /* height: 110px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links-container i {
+  font-size: 80px;
+  color: #979696ee;
+}
+
+#links-container a:hover {
+  color:var(--turquoise);
+  transform: scale(1.1);
+}
+
+#links-container a:hover i{
+  color:var(--turquoise);
+}
+
+#project-introduction h4 {
+  font-size: var(--h4s);
+  padding: 0 0 10px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#project-introduction p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: var(--ps);
+}
+
+#project-introduction img {
+  width: 90%;
+  max-width: 500px;
+  border: 5px solid var(--gray);
+  border-radius: 12px;
+  background-color: var(--creamy);
+}
+
+.specific-link-active a:hover {
+  color: var(--turquoise);
+  
+}
+
+.specific-link-active a:active {
+  color: var(--gray);
+  transform: scale(0.9);
+}
+
+/*###########################################################################################*/
+/*################################# project-team ############################################*/
+/*###########################################################################################*/
+
+#project-team {
+  background-color: var(--creamy);
+  padding: 85px 0 0;
+  color: var(--gray);
+}
+
+#project-team h5 {
+  font-size: var(--h5s);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#project-team {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/*######################################*/
+/*########## links-container ###########*/
+/*######################################*/
+
+#links-container {
+  width: 90%;
+  max-width: 500px;
+}
+
+#submit-read-later {
+  display: flex;
+  align-content: center;
+}
+
+#saved-button {
+  display: block;
+}
+
+#save-button {
+  display: block;
+}
+
+#all-links {
+  margin: 35px 0 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.intro-button {
+  font-family: 'Courgette', cursive;
+  font-size: var(--ps);
+  color: var(--creamy);
+  align-self: center;
+  padding: 0 10px;
+  border-radius: 30px;
+  background-color: var(--gray);
+  height: 80%;
+}
+
+.intro-button:hover {
+  box-shadow: 0 0 5px 5px var(--turquoise);
+}
+
+.intro-button:active {
+  background-color: var(--turquoise);
+  color: var(--gray);
+}
+
+/*######################################*/
+/*########## team-container ###########*/
+/*######################################*/
+
+#team-container {
+  width: 250px;
+}
+
+#roles-container {
+  margin: 35px 0 0;
+  padding: 10px;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  gap: 20px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: var(--ps);
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+.person {
+  font-size: var(--ps);
+}
+
+/*###########################################################################################*/
+/*###################### project-details-upper-separator ####################################*/
+/*###########################################################################################*/
+
+#project-details-upper-separator {
+  width: 100%;
+  min-height: 80px;
+  /* background-color: #00adb5; */
+  background-image: linear-gradient(var(--creamy) 50%, var(--gray) 60%);
+}
+
+/*###########################################################################################*/
+/*########################## single-project-details #########################################*/
+/*###########################################################################################*/
+
+#single-project-details {
+  background-color: var(--gray);
+  /* margin: 2rem 0 0; */
+}
+
+#single-project-details {
+  padding: 35px 0 0;
+  color: var(--creamy);
+}
+
+#single-project-details h2 {
+  font-size: var(--h2s);
+}
+
+#single-project-details p {
+  margin: 2rem 0 0;
+  width: 90%;
+  max-width: 500px;
+}
+
+/*###########################################################################################*/
+/*###################### project-details-lower-separator ####################################*/
+/*###########################################################################################*/
+
+#project-details-lower-separator {
+  width: 100%;
+  min-height: 80px;
+  background-image: linear-gradient(var(--gray) 50%, var(--dgray) 60%);
+}
+
+/*###########################################################################################*/
+/*########################## comment-input ##################################################*/
+/*###########################################################################################*/
+
+/*######################################*/
+/*########## whole section #############*/
+/*######################################*/
+#comment-input {
+  background-color: var(--dgray);
+  width: 100%;
+  padding: 35px 0 35px;
+}
+
+/*######################################*/
+/*## the form that allows comments #####*/
+/*######################################*/
+#comment-form {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: var(--turquoise); */
+}
+
+#comment-input h4 {
+  font-size: var(--h4s);
+  color: var(--creamy);
+  padding: 0 0 30px;
+}
+
+#comment-form button {
+  font-family: 'Courgette', cursive;
+  font-size: var(--ps);
+  color: var(--dgray);
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+#comment-form button:hover{
+  background-color: var(--gray);
+  color: var(--creamy);
+}
+
+.errorlist {
+  /* background-color: var(--creamy); */
+  padding: 3px 10px;
+}
+
+.errorlist li {
+  text-align: start;
+  font-size: var(--ps);
+  color: #ee7b7bee;
+}
+
+/*######################################*/
+/*## container of field + lable ########*/
+/*######################################*/
+
+.forum-field {
+  position: relative; /* this will be the anchor of the lable */
+  width: 90%;
+  max-width: 500px;
+  padding: 5px;
+}
+
+.forum-field textarea,
+.forum-field input {
+  font-size: var(--ps);
+  width: 100%;
+  height:fit-content;
+  text-align: start;
+  border-radius: 10px;
+  padding: 3px 10px;
+  background-color: var(--gray);
+}
+
+.input-lable {
+  color: var(--creamy);
+  font-size: var(--ps);
+  position: absolute;
+  left:15px;
+  top:8px;
+  transition: 0.5s;
+}
+
+.forum-field input:hover ~.input-lable,
+.forum-field input:focus ~.input-lable,
+.forum-field textarea:hover ~.input-lable,
+.forum-field textarea:focus ~.input-lable,
+.input-lable:hover ~ .input-lable,
+.forum-field input:not(:placeholder-shown) ~ .input-lable,
+.forum-field input:not(:placeholder-shown) ~ .input-lable,
+.forum-field textarea:not(:placeholder-shown) ~ .input-lable {
+  top: -17px;
+  font-size: 18px;
+  color: var(--turquoise);
+  background-color: var(--creamy);
+  border-radius: 10px;
+  padding: 2px 4px;
+}
+
+.forum-field input:hover,
+.forum-field input:focus,
+.forum-field textarea:hover,
+.forum-field textarea:focus,
+.input-lable:hover,
+.forum-field input:not(:placeholder-shown),
+.forum-field input:not(:placeholder-shown),
+.forum-field textarea:not(:placeholder-shown){
+  background-color: var(--creamy) !important;
+}
+
+/*###########################################################################################*/
+/*###################### project-details-lowest-separator ####################################*/
+/*###########################################################################################*/
+
+#project-details-lowest-separator {
+  width: 100%;
+  min-height: 80px;
+  background-image: linear-gradient(var(--dgray) 50%, var(--creamy) 60%);
+}
+
+/*###########################################################################################*/
+/*########################## comments-output ################################################*/
+/*###########################################################################################*/
+
+#comments-output {
+  background-color: var(--creamy);
+  padding: 35px 0 60px;
+}
+
+#no-comments-container h5,
+#no-comments-container h2 {
+  color: var(--dgray);
+}
+
+#no-comments-container h5 {
+  padding-top: 20px;
+}
+
+#comments-container h5 {
+color: var(--creamy);
+}
+
+#no-comments-container h2,
+#comments-container h2 {
+  font-size: var(--h2s);
+  padding-bottom: 2px;
+}
+
+#no-comments-container h5,
+#comments-container h5 {
+  font-size: var(--h5s);
+  
+}
+
+#comments-container p {
+  font-size: var(--ps);
+  color: var(--turquoise);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#comments-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 25px;
+}
+
+#comments-list li {
+  background-color: var(--dgray);
+  padding: 15px;
+  max-width: 90%;
+  border-radius: 15px;
+}
+
+/*###########################################################################################*/
+/*########################## index-footer ###################################################*/
+/*###########################################################################################*/
+
+#index-footer {
+  background-color: var(--creamy) !important;
+}
+
+#lower-navbar-elements {
+  background-color: var(--dgray) !important;
+}
+
+#lower-navbar-elements i {
+  color: var(--turquoise) !important;
+}
+
+#lower-navbar-elements i:hover {
+  color: var(--creamy) !important;
+}

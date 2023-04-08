@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block script %} {% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=PT+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c67e56c716.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'media-queries.css' %}">
+  </head>
+
+  <!-- This is the main grid -->
+  <body id="index-body-grid">
+    <!-- First child of the grid -->
+    <header id="index-header" class="index-grid-item">
+      
+      <!-- The content of the upper navbar -->
+      <nav id="upper-navbar-elements">
+
+        <!-- Checkbox as an animation trigger -->
+        <input type="checkbox" id="nav-check" hidden />
+
+        <!-- Navbar's link list -->
+        <ul>
+          <li><!-- This will only be displayed on "drop down" -->
+            <h1 id="side-header">Site Links</h1></li>
+          <li><a class="navbar-link" href="{% url 'main-page' %}">Main Page</a></li>
+          <li><a class="navbar-link" href="{% url 'all-projects' %}">My Projects</a></li>
+          <li><a class="navbar-link" href="{% url 'saved-projects' %}">Saved projects</a></li>
+        </ul>
+
+        <!-- The Hamburger Button, as a lable of a checkbox -->
+        <!-- Will be displayed only at certain resolution -->
+        <label for="nav-check" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        
+      </nav>
+
+    </header>
+
+    <section id="inherited-body">
+      <!-- The Second, third, .. n'th child of the grid -->
+      {% block body %}
+      {% endblock %}
+    </section>
+  
+    <!-- Last child of the grid -->
+    <footer id="index-footer">
+      <!-- The content of the lower navbar -->
+      <nav id="lower-navbar-elements">
+        <ul>
+          <li>
+            <a class="navbar-link" href="mailto:alexander85bal@gmail.com">
+              <i class="fa-sharp fa-solid fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a class="navbar-link" href="https://www.linkedin.com/in/alex85bal" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="navbar-link" href="https://github.com/alex85b" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </body>
+</html>

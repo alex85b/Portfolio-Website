@@ -1,0 +1,62 @@
+#project {
+    flex: 0 0 300px;
+    transition: transform 0.2s;
+    box-shadow: 0 0 15px 7px var(--creamy);
+    margin: 35px;
+    border-radius: 10px;
+}
+
+#project:hover {
+    box-shadow: 0 0 15px 7px var(--turquoise);
+    transform: scale(1.05);
+}
+
+#project:active {
+    transform: scale(1);
+}
+
+#project_info {
+    padding: 20px 0;
+}
+
+#project_info h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: var(--proj_h3);
+}
+
+#project_info h5 {
+    font-size: var(--proj_h5);
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 0 0 0;
+}
+
+#skils {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px;
+}
+
+#skils h4 {
+    font-size: var(--proj_h4);
+    padding: 0 0 1rem;
+}
+
+#skils p {
+    width: 70%;
+    font-family: "Montserrat", sans-serif;
+    font-size: var(--proj_p);
+    font-weight: bold;
+    border-bottom: 5px solid var(--turquoise);
+    border-radius: 1rem;
+}
+
+#skils p:nth-child(even) {
+    background-color: var(--dgray);
+    color: var(--creamy);
+}
+
+#skils p:nth-child(odd) {
+    background-color: var(--gray);
+    color: var(--creamy);
+}

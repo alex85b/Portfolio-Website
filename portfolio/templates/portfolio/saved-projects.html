@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Saved Projects
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portfolio/saved-projects.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% if has_projects %}
+        <header class="saved-proj-header">
+            <h1>Saved For Later</h1>
+        </header>
+        <div id="saved-separator"></div>
+        <footer class="saved-proj-footer">
+            <h3>Click to navigate <span>to</span></h3>
+            <ul>
+                {% for proj in projects %}
+                    <li>
+                        <a href="{% url 'project-details' proj.slug %}">{{ proj.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            
+        </footer>
+        
+    {% else %}
+        <header class="saved-proj-header">
+            <h1>No Saved Projects</h1>
+        </header>
+        <div id="saved-separator"></div>
+        <footer class="saved-proj-footer">
+            <h5>You could save any project for later</h5>
+        </footer>
+    {% endif %}
+    
+{% endblock %}

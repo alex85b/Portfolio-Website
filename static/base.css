@@ -1,0 +1,274 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=PT+Sans&family=Ubuntu&display=swap"); */
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+:root {
+  --dgray: #222831;
+  --gray: #393e46;
+  --creamy: #eeeeee;
+  --turquoise: #00adb5;
+
+  /* General Sizes */
+  --h1s: 125px;
+  --h2s: 80px;
+  --h3s: 70px;
+  --h4s: 50px;
+  --h5s: 30px;
+  --ps: 25px;
+  --as: 25px;
+
+  /* Special Case : Project Sizes*/
+  --proj_p: 13px;
+  --proj_h5: 15px;
+  --proj_h4: 17px;
+  --proj_h3: 20px;
+}
+
+* {
+  /* Global Rest */
+  margin: 0;
+  padding: 0;
+
+  /* Box size includes pading and margin an borders */
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  /* word-wrap: break-word; */
+}
+
+h1 {
+  font-family: "Courgette", cursive;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  /* font-family: "Ubuntu", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Courgette", cursive;
+}
+
+p {
+  font-family: "PT Sans", sans-serif;
+  line-height: 185%;
+}
+
+a {
+  font-family: "Courgette", cursive;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  /* background-color: var(--creamy); */
+  background-color: crimson; /* Debug Color */
+  height: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+i,
+img,
+ul,
+li {
+  overflow: hidden;
+}
+
+/*###################################*/
+/*## Grid ###########################*/
+/*###################################*/
+
+#index-body-grid {
+  display: grid;
+  min-height: 100vh;
+  /* min-width: 100vw; */
+  grid-template-columns: 100vw;
+  /*
+  a header and a footer = 2 rows,
+  at most - 4 sections = 4 rows,
+  4 section is 3 seperators = 3 rows,
+  total of 2 + 4 + 3 = 9 rows.
+  */
+  grid-template-rows: auto 1fr auto;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+/*###################################*/
+/*## First Grid Item ## Header ######*/
+/*###################################*/
+
+/* This is the container of the upper navbar */
+/* Holds the navbar at the upper-center */
+/* Holds the Hidden Checkbox and its Hamburger Label */
+#index-header {
+  background-color: var(--creamy);
+  width: 100%;
+  display: flex;
+  justify-content: center; /* X axis */
+  align-items: start; /* Y axis */
+}
+
+/* This is the actual navbar */
+/* Holds links and header */
+#upper-navbar-elements {
+  --display: block;
+  width: 1023px;
+  height: 50px;
+  border-radius: 0 0 80px 80px;
+  background-color: var(--gray);
+}
+
+/* Should be displayed only on the side-navbar */
+#side-header {
+  display: none;
+}
+
+/* This is a containet for the li's */
+/* Holds the li's that holds upper-sidebar links */
+#upper-navbar-elements ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+
+  /* Fill the whole navbar*/
+  width: 100%;
+  height: 100%;
+}
+
+#upper-navbar-elements ul li {
+  display: var(--display);
+}
+
+/* Holds the links of the upper header */
+#upper-navbar-elements li {
+  width: fit-content;
+  transition: 0.1s;
+}
+
+/* Enlarge - animation */
+#upper-navbar-elements li a:hover,
+#upper-navbar-elements li a:active,
+#upper-navbar-elements li a:focus {
+  color: #00adb5;
+}
+
+/* Deflate - animation */
+#upper-navbar-elements li:active,
+#upper-navbar-elements li:focus {
+  transform: scale(0.9);
+}
+
+/* All the links, the a's themselves */
+.navbar-link {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 10px;
+  /* margin: 0 20px; */
+  color: var(--creamy);
+  font-size: var(--as);
+}
+
+/* This is the lable element for the hidden checkbox */
+/* The lable contains 3 */
+#hamburger {
+  display: none;
+  margin: 10px 10px 0 0;
+}
+
+/* Those are the lines of the hamburger */
+#hamburger div {
+  height: 5px;
+  width: 35px;
+  margin-bottom: 6px;
+  background: var(--turquoise);
+}
+
+#hamburger:hover div {
+  background-color: crimson;
+}
+
+/*###################################*/
+/*## Inherited body #################*/
+/*###################################*/
+
+#inherited-body {
+  height: 100%;
+  background-color: var(--dgray);
+}
+
+/*###################################*/
+/*## Last Grid Item ## Footer #######*/
+/*###################################*/
+
+/* This is the container of the lower navbar */
+/* Holds the navbar at the lower-center */
+#index-footer {
+  background-color: var(--dgray);
+  width: 100%;
+  display: flex;
+  justify-content: center; /* X axis */
+  align-items: end; /* Y axis */
+}
+
+/* This is the actual navbar */
+/* Holds icons */
+#lower-navbar-elements {
+  width: 350px;
+  height: 72px;
+  border-radius: 90px 90px 0 0;
+  background-color: var(--creamy);
+}
+
+#lower-navbar-elements i {
+  display: block;
+  margin: auto auto;
+}
+
+/* This is a containet for the li's */
+/* Holds the li's that holds lower-sidebar icons */
+#lower-navbar-elements ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+
+  /* Fill the whole navbar*/
+  width: 100%;
+  height: 100%;
+}
+
+/* This "CORRECTS" the color of the lower navbar links*/
+#lower-navbar-elements .navbar-link {
+  color: var(--gray);
+  font-size: 40px;
+}
+
+#lower-navbar-elements .navbar-link :hover{
+  color: var(--turquoise);
+}
+
+#lower-navbar-elements .navbar-link :active{
+  color: tomato;
+  transform: scale(0.9);
+}
+
+/* Holds the links of the lower header */
+#lower-navbar-elements li {
+  width: fit-content;
+  transition: 0.1s;
+}

@@ -1,0 +1,267 @@
+/*###########################################################################################*/
+/*################################## Welcome Section ########################################*/
+/*###########################################################################################*/
+
+#welcome_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 65px 0 65px;
+  background-color: var(--creamy);
+}
+
+.small {
+  display: none;
+}
+
+#welcome_section header h1 {
+  font-size: var(--h1s);
+  color: var(--dgray);
+  padding: 0 0 65px 15px;
+}
+
+#welcome_section_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: fit-content;
+  gap: 35px;
+}
+
+.who-am-i {
+  width: 900px;
+}
+
+#welcome_section_container img {
+  width: 190px;
+  height: 190px;
+  border: 5px solid var(--gray);
+  border-radius: 12px;
+  background-color: var(--creamy);
+  transform: rotateZ(3deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#static-who-am-i {
+  display: none;
+}
+
+#welcome_section_container p {
+  font-size: var(--ps);
+  color: var(--gray);
+  text-align: left;
+}
+
+#welcome_section_container .hello-line {
+  font-size: calc(var(--ps) + 1vw);
+  font-weight: 600;
+}
+
+/*###################################*/
+/*### runing-text-container #########*/
+/*###################################*/
+
+.text {
+  position: relative;
+  color: var(--turquoise);
+  font-size: calc(var(--ps) + 1vw);
+}
+
+.text.first-text {
+  color: var(--dgray);
+}
+
+.text.second-text::after {
+  content: "";
+  animation-duration: 12s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.text.second-text::before {
+  content: "";
+  position: absolute;
+  background-color: var(--creamy);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid var(--dgray);
+
+  /* steps(x, y) z
+  https://designmodo.com/steps-css-animations/
+  https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php
+   */
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-timing-function: steps(14, end);
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+/* bound to the "slidein" in "animation: slidein" */
+/* https://openclassrooms.com/en/courses/5625816-create-modern-css-animations/6031986-create-more-complex-animations-using-css-keyframes */
+@keyframes slidein {
+  /* Percentages to devide my animation time: */
+  /* At 40% of my 4s animation time i should be at "maximum-right" aka left 100% */
+  /* At 60% i am yet to move from my "maximum-right" position */
+  /* At 100% i should be at my "minimum-right position aka left 0% */
+  /* this way i spend 20% of my time - holding the "maximum-right" position */
+  40% {
+    left: calc(100% + 2px);
+  }
+
+  60% {
+    left: calc(100% + 2px);
+  }
+
+  80% {
+    left: 0%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    content: "Backend Developer";
+  }
+
+  33% {
+    content: "Backend Developer";
+  }
+
+  33.1% {
+    content: "Fullstack Developer";
+  }
+
+  66% {
+    content: "Fullstack Developer";
+  }
+
+  66.1% {
+    content: "Curious Person";
+  }
+
+  100% {
+    content: "Curious Person";
+  }
+}
+
+/*###########################################################################################*/
+/*########################## project-details-separator_upper ################################*/
+/*###########################################################################################*/
+
+#project-details-separator_upper {
+  width: 100%;
+  height: 5rem;
+  background-image: linear-gradient(var(--creamy) 50%, var(--gray) 60%);
+}
+
+/*###########################################################################################*/
+/*################################## experienced section ####################################*/
+/*###########################################################################################*/
+
+#experienced_section {
+  padding: 2rem 0;
+  width: 100%;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#experienced_section h2 {
+  text-align: center;
+  font-size: var(--h2s);
+  padding: 0 5px 65px 15px;
+  color: var(--turquoise);
+}
+
+#experienced_section__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+}
+
+#experienced_section__container div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#experienced_section__container i {
+  width: 120px;
+  height: 120px;
+  color: var(--turquoise);
+  object-fit: cover;
+}
+
+#experienced_section__container img {
+  width: 120px;
+  height: 120px;
+  color: var(--turquoise);
+  object-fit: cover;
+}
+
+#experienced_section__container p {
+  font-size: var(--ps);
+  color: var(--turquoise);
+}
+
+/*###########################################################################################*/
+/*########################## project-details-separator_lower ################################*/
+/*###########################################################################################*/
+
+#project-details-separator_lower {
+  width: 100%;
+  height: 5rem;
+  background-image: linear-gradient(var(--gray) 50%, var(--dgray) 60%);
+}
+
+/*###########################################################################################*/
+/*################################### projects section ######################################*/
+/*###########################################################################################*/
+
+#projects_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 0 95px;
+  background-color: var(--dgray);
+}
+
+#projects_section h2 {
+  text-align: center;
+  font-size: var(--h2s);
+  padding: 0 5px 65px 5px;
+  color: var(--creamy);
+}
+
+#projects_section ul {
+  width: 90%;
+  min-height: 260px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* This is the flex item of 'projects_section ul' */
+#project {
+  background-color: var(--creamy);
+}

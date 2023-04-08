@@ -1,0 +1,263 @@
+/*###########################################################################################*/
+/*############################## Media Queries ##############################################*/
+/*###########################################################################################*/
+
+/*######################################*/
+/*########### 3440px ###################*/
+/*######################################*/
+
+/* 
+  General Sizes
+  --h1s: 125px;
+  --h2s: 80px;
+  --h3s: 70px;
+  --h4s: 50px;
+  --ps: 25px;
+  --as: 25px;
+
+  Special Case : Project Sizes
+  --proj_p: 13px;
+  --proj_h5: 15px;
+  --proj_h4: 17px;
+  --proj_h3: 20px;
+  */
+
+  @media screen and (max-width: 3440px) {
+    
+    .who-am-i {
+      width: 1000px;
+    }
+  }
+
+/*######################################*/
+/*########### 1440px ###################*/
+/*######################################*/
+
+/* 
+  General Sizes
+  --h1s: 125px;
+  --h2s: 80px;
+  --h3s: 70px;
+  --h4s: 50px;
+  --ps: 25px;
+  --as: 25px;
+
+  Special Case : Project Sizes
+  --proj_p: 13px;
+  --proj_h5: 15px;
+  --proj_h4: 17px;
+  --proj_h3: 20px;
+  */
+
+@media screen and (max-width: 1440px) {
+  :root {
+    --ps: 23px !important;
+  }
+
+  .who-am-i {
+    width: 700px;
+  }
+}
+
+/*######################################*/
+/*########### 1024px ###################*/
+/*######################################*/
+
+/* 
+  General Sizes
+  --h1s: 125px;
+  --h2s: 80px;
+  --h3s: 70px;
+  --h4s: 50px;
+  --ps: 23px !important;
+  --as: 25px;
+
+  Special Case : Project Sizes
+  --proj_p: 13px;
+  --proj_h5: 15px;
+  --proj_h4: 17px;
+  --proj_h3: 20px;
+  */
+
+@media screen and (max-width: 1024px) {
+  #upper-navbar-elements {
+    width: 767px;
+  }
+
+  #welcome_section_container {
+    flex-direction: column;
+  }
+
+  #welcome_section_container img {
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+/*######################################*/
+/*########### 768px ####################*/
+/*######################################*/
+
+/* 
+  General Sizes
+  --h1s: 125px;
+  --h2s: 80px;
+  --h3s: 70px;
+  --h4s: 50px;
+  --ps: 23px !important;
+  --as: 25px;
+
+  Special Case : Project Sizes
+  --proj_p: 13px;
+  --proj_h5: 15px;
+  --proj_h4: 17px;
+  --proj_h3: 20px;
+  */
+@media screen and (max-width: 768px) {
+  :root {
+    --h1s: 100px !important;
+  }
+
+  /* An anchor for the hamburger */
+  #index-header {
+    position: relative; /* Anchor */
+  }
+
+  /* Switch the Hamburger on, and set position */
+  #hamburger {
+    position: absolute;
+    display: inline;
+    right: 0px;
+    top: 0px;
+    z-index: 999;
+  }
+
+  /* Remove whole the upper navbar from the display */
+  /* By changing the width to nothing */
+  #upper-navbar-elements {
+    width: 0%;
+  }
+
+  /* Add the side header to the display */
+  #side-header {
+    display: block;
+    margin: 50px 10px 0 0;
+  }
+
+  #index-header .navbar-link {
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+
+  /* Transform the upper-navbar-elements to column */
+  /* Change its dimensions to nothing */
+  /* Move it to the upper corner */
+  /* Change the color to gray */
+  #upper-navbar-elements ul {
+    width: 0px;
+    height: 0px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    gap: 20px;
+    background-color: var(--gray);
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 0 100%;
+    z-index: 998;
+    color: var(--creamy);
+    text-align: right;
+  }
+
+  /* Change the color of the a's and h1 to cream */
+  #upper-navbar-elements a {
+    color: var(--creamy);
+  }
+
+  /* When invisible checkbox is checked */
+  /* Find the 'next' ul that shares a parent with this */
+  /* Return the ul to display */
+  #nav-check:checked ~ ul {
+    transition: 0.3s;
+    width: 270px;
+    height: 270px;
+  }
+
+  /* Stretch Lower-navbar */
+  #lower-navbar-elements {
+    width: 100%;
+    height: calc(fit-content + 5px);
+    border-radius: 0;
+  }
+
+  #lower-navbar-elements .navbar-link{
+    padding: 0;
+    margin: 0;
+  }
+
+  /* all-projects */
+  #all-projects h1 {
+    padding: 0 5px 0;
+  }
+
+  #welcome_section {
+    padding-top: 0;
+  }
+
+  #projects_section ul {
+    gap: 0;
+  }
+
+  .large {
+    display: none;
+  }
+
+  .who-am-i {
+    width: 400px;
+  }
+
+  .small {
+    display: inline-block;
+  }
+
+  #project-introduction {
+    padding: 0;
+  }
+
+  .saved-proj-header {
+    padding: 0;
+  }
+}
+
+/*######################################*/
+/*########### 425px ####################*/
+/*######################################*/
+
+@media screen and (max-width: 425px) {
+
+  #index-footer nav {
+    height: fit-content;
+  }
+  
+  #lower-navbar-elements ul {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #lower-navbar-elements .navbar-link {
+    margin: 0;
+    padding: 0;
+  }
+
+  #index-footer ul {
+    flex-direction: column;
+  }
+
+  #index-footer li:nth-child(1) {
+    padding-top: 15px;
+  }
+}
+

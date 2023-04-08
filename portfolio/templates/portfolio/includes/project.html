@@ -1,0 +1,18 @@
+{% load static %}
+
+<li class="project">
+  <a href="{% url 'project-details' p.slug %}">
+    <article>
+        <div id="project_info">
+          <h3>{{ p.name }}</h3>
+          <h5>{{ p.date }}</h5>
+        </div>   
+        <div id="skils">
+          <h4>Demonstrated Skills</h4>
+          {% for skil in p.skills.all %}
+          <p>{{ skil }}</p>
+          {% endfor %}
+        </div>
+    </article>
+  </a>
+</li>

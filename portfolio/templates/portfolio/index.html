@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Alex Balashov
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'portfolio/index.css' %}">
+  <link rel="stylesheet" href="{% static 'portfolio/project.css' %}">
+{% endblock %}
+
+{% block body %}
+
+  <section id="welcome_section">
+      <header>
+        <h1>Alex's Portfolio</h1>
+      </header>
+      <div id="welcome_section_container">
+        <img
+          src="{% static 'portfolio/images/me.png' %}"
+          alt="Alex Balashov - The Owner of this Portfolio Site"
+        />
+        <div class="who-am-i large">
+          <p class="hello-line">Hello I'm Alex
+            <span class="runing-text-container">
+              <span class="text first-text">I'm a</span>
+              <span class="text second-text"></span>
+              <span id="static-who-am-i">I'm a Programmer</span>
+            </span>
+          </p>
+          <p>I'm currently interested in Backend and Full-stack development</p>
+          <p>I graduated from HIT with a BCs bachelor's degree in Computer Science</p>
+          <p>Currently - I'm searching for new job opportunities</p>
+        </div>
+
+        <div class="who-am-i small">
+          <p class="hello-line">Hello I'm Alex</p>
+          <p>
+            <span class="runing-text-container">
+              <span class="text first-text">I'm a</span>
+              <span class="text second-text"></span>
+              <span id="static-who-am-i">I'm a Programmer</span>
+            </span>
+          </p>
+          <p>I'm currently interested in Backend</p>
+          <p>And Full-stack development</p>
+          <p>I graduated from HIT with a BCs</p>
+          <p>Bachelor's degree in Computer Science</p>
+          <p>Currently I'm searching for</p>
+          <p>New job opportunities</p>
+        </div>
+      </div>
+
+  </section>
+  
+  <div id="project-details-separator_upper"></div>
+  
+  <section id="experienced_section">
+    <header>
+      <h2>My Technology Stack</h2>
+    </header>
+    <div id="experienced_section__container">
+      <div>
+        <i class="fa-brands fa-java fa-6x"></i>
+        <p>Java</p>
+      </div>
+      <div> 
+        <i class="fa-brands fa-square-js fa-6x"></i>
+        <p>JavaScript</p>
+      </div>
+      <div>
+        <i class="fa-brands fa-node fa-6x"></i>
+        <p>Nodejs</p>
+      </div>
+      <div> 
+        <i class="fa-brands fa-python fa-6x"></i>
+        <p>Python</p>
+      </div>
+      <div> 
+        <img src={% static 'portfolio/images/django.svg' %} alt="Django icon from: https://icons8.com/icons/set/django">
+        <p>Django</p>
+      </div>
+      <div> 
+        {% comment %} <img src={% static 'portfolio/images/css3.svg' %} alt="CSS icon from: https://icons8.com/icons/set/CSS"> {% endcomment %}
+        <i class="fa-brands fa-css3-alt fa-6x"></i>
+        <p>CSS</p>
+      </div>
+      <div> 
+        {% comment %} <img src={% static 'portfolio/images/html5.svg' %} alt="HTML5 icon from: https://icons8.com/icons/set/HTML5"> {% endcomment %}
+        <i class="fa-brands fa-html5 fa-6x"></i>
+        <p>HTML5</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="project-details-separator_lower"></div>
+      
+  <section id="projects_section">
+    <H2>Latest Projects</H2>
+      <ul>
+        {% for p in projects %}
+          {% include "portfolio/includes/project.html" %}
+        {% endfor %}
+      </ul>
+  </section>
+
+{% endblock %}

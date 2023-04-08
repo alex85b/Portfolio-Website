@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block script %}
+{% endblock %}
+
+{% block title %}
+  Project Details
+{% endblock %}
+
+
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'portfolio/project_details.css' %}">
+{% endblock %}
+
+{% block body %}
+
+  <!-- This isn't ajax yet - when this will bocome ajax , delete this section -->
+  <section id="error-notice">
+    {% if comment_form.errors %}
+      <div id="error-text-container">
+        <h5>Couldn't Save Your Comment</h5>
+        <p>Check the errors on the comment form</p>
+        <img id="thinking-face-imoji" src="{% static 'portfolio/images/thinking-face-svgrepo-com.svg' %}" alt="thinking-face-imoji">
+        <a href="#comment-input">Click this to jump to the form</a>
+      </div>
+    {% endif %}
+  </section>
+
+  <section id="project-introduction" class="project-details-section">
+    <h4>{{ project.name }}</h4>
+    <p>{{ project.date }}</p>
+    <div id="image-links-container">
+      <img src="{{ project.image.url }}" alt="project-image">
+      <div id="links-container">
+        <a href="{{project.github_link}}" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="{{project.youtube_link}}" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <form action="{% url 'saved-projects' %}" id="submit-read-later" method="POST">
+          {% csrf_token %}
+          <input type="hidden" value="{{ project.id }}" name="project_id">
+          {% if is_saved %}
+            <button id="saved-button" class="intro-button">Forget</button>
+          {% else %}
+            <button id="save-button" class="intro-button">Remember</button>
+          {% endif %}
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="project-team" class="project-details-section">
+    <div id="lead-role-container" class="title-container">
+      <p class="title">Project Lead</p>
+      <p class="person">{{ project.team_lead }}</p>
+    </div>
+    {% for tm in project.team_members.all %}
+      {% if tm != project.team_lead %}
+
+        <div class="title-container">
+          <p class="title">Team Member</p>
+          <p class="person">{{ tm }}</p>
+        </div>
+        
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <div id="project-details-upper-separator">
+  </div>
+  
+  <section id="single-project-details" class="project-details-section">
+    <h2>Details</h2>
+    <p>{{ project.full_description | linebreaks }}</p>
+  </section>
+
+  <div id="project-details-lower-separator">
+  </div>
+
+  <section id="comment-input" class="project-details-section">
+    <h4>Your Comment</h4>
+    <form id="comment-form" action="{% url 'project-details' project.slug %}" method="POST">
+      {% csrf_token %}
+      {% for field in comment_form %}
+        <div class="forum-field">
+          {{ field }}
+          <label class="input-lable" for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field.errors }}
+        </div>
+      {% endfor %}
+      <button>Save Comment</button>
+    </form>
+  </section>
+
+  <div id="project-details-lowest-separator">
+  </div>
+
+  <section id="comments-output">
+    {% if comments %}
+      <div id="comments-container">
+        <h2>People Saying</h2>
+        <ul id="comments-list">
+          {% for com in comments %}
+            <li>
+              <div class="single-comment">
+                <div class="comment-username">
+                  <h5>{{ com.user_name }}</h5>
+                </div>
+                <div class="comment-content">
+                  <p>{{ com.comment_text }}</p>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% else %}
+      <div id="no-comments-container">
+        <h2>No Comments Yet</h2>
+        <h5>Be the first to leave a comment ?</h5>  
+      </div>
+    {% endif %}
+  </section>
+  
+{% endblock %}
