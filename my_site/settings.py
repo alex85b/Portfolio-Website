@@ -29,7 +29,7 @@ SECRET_KEY = env("DJA_S_KEY") # Read the 'DJA_S_KEY' variable from the .env file
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DJA_IS_DEBUG") # Read the 'DJA_S_KEY' variable from the .env file
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
