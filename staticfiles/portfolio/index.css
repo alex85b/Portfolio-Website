@@ -54,7 +54,7 @@
   text-align: left;
 }
 
-#welcome_section_container #hello-line {
+#welcome_section_container .hello-line {
   font-size: calc(var(--ps) + 1vw);
   font-weight: 600;
 }

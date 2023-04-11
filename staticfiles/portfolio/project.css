@@ -1,17 +1,23 @@
-#project {
+.project {
     flex: 0 0 300px;
     transition: transform 0.2s;
     box-shadow: 0 0 15px 7px var(--creamy);
+    background-color: var(--creamy);
     margin: 35px;
     border-radius: 10px;
 }
 
-#project:hover {
+.project a {
+    display: block;
+    height: 100%;
+}
+
+.project:hover {
     box-shadow: 0 0 15px 7px var(--turquoise);
     transform: scale(1.05);
 }
 
-#project:active {
+.project:active {
     transform: scale(1);
 }
 

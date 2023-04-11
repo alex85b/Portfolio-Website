@@ -142,17 +142,21 @@
   #side-header {
     display: block;
     margin: 50px 10px 0 0;
+    font-size: var(--h5s);
+    color: var(--creamy);
+    font-family: 'Ubuntu', sans-serif;
   }
 
   #index-header .navbar-link {
     margin: 0 10px 0 0;
     padding: 0;
+    color: var(--creamy);
+    font-family: 'Ubuntu', sans-serif;
   }
 
   /* Transform the upper-navbar-elements to column */
   /* Change its dimensions to nothing */
   /* Move it to the upper corner */
-  /* Change the color to gray */
   #upper-navbar-elements ul {
     width: 0px;
     height: 0px;
@@ -163,12 +167,12 @@
     justify-content: start;
     align-items: end;
     gap: 20px;
-    background-color: var(--gray);
+    background-image: linear-gradient(45deg, var(--turquoise), 5% , var(--dgray));
     box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 0 0 0 100%;
+    border-radius: 0 0 0 120px;
     z-index: 998;
-    color: var(--creamy);
     text-align: right;
+    transition: 0.3s;
   }
 
   /* Change the color of the a's and h1 to cream */
@@ -180,9 +184,8 @@
   /* Find the 'next' ul that shares a parent with this */
   /* Return the ul to display */
   #nav-check:checked ~ ul {
-    transition: 0.3s;
-    width: 270px;
-    height: 270px;
+    width: 200px;
+    height: 290px;
   }
 
   /* Stretch Lower-navbar */
@@ -215,11 +218,13 @@
   }
 
   .who-am-i {
-    width: 400px;
+    width: 90%;
+    padding-left: 15px;
   }
 
   .small {
     display: inline-block;
+    overflow: hidden;
   }
 
   #project-introduction {
@@ -235,7 +240,29 @@
 /*########### 425px ####################*/
 /*######################################*/
 
+/* 
+  General Sizes
+  --h1s: 125px;
+  --h2s: 80px;
+  --h3s: 70px;
+  --h4s: 50px;
+  --ps: 23px !important;
+  --as: 25px;
+
+  Special Case : Project Sizes
+  --proj_p: 13px;
+  --proj_h5: 15px;
+  --proj_h4: 17px;
+  --proj_h3: 20px;
+  */
+
 @media screen and (max-width: 425px) {
+
+  :root {
+    --h1s: 22vw !important;
+    --h2s: 17vw !important;
+    --ps: 6vw !important;
+  }
 
   #index-footer nav {
     height: fit-content;
@@ -258,6 +285,15 @@
 
   #index-footer li:nth-child(1) {
     padding-top: 15px;
+  }
+
+  .project {
+    flex: 0 0 80%;
+  }
+
+  #welcome_section_container img {
+    width: 47vw;
+    height: 47vw;
   }
 }
 

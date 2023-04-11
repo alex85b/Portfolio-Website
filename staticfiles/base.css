@@ -92,9 +92,17 @@ li {
 #index-body-grid {
   display: grid;
   min-height: 100vh;
-  grid-auto-rows: auto;
-  /* grid-template-rows: repeat(5, 1fr); */
-  grid-auto-columns: auto;
+  /* min-width: 100vw; */
+  grid-template-columns: 100vw;
+  /*
+  a header and a footer = 2 rows,
+  at most - 4 sections = 4 rows,
+  4 section is 3 seperators = 3 rows,
+  total of 2 + 4 + 3 = 9 rows.
+  */
+  grid-template-rows: auto 1fr auto;
+  column-gap: 0;
+  row-gap: 0;
 }
 
 /*###################################*/
@@ -195,11 +203,13 @@ li {
 }
 
 /*###################################*/
-/*## Grid items (all) ###############*/
+/*## Inherited body #################*/
 /*###################################*/
 
-/* General Index-grid-item class */
-/* .index-grid-item {} */
+#inherited-body {
+  height: 100%;
+  background-color: var(--dgray);
+}
 
 /*###################################*/
 /*## Last Grid Item ## Footer #######*/

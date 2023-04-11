@@ -1,7 +1,7 @@
 .saved-proj-header {
     background-color: var(--creamy);
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
 .saved-proj-footer {
     background-color: var(--dgray);
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,8 @@
     padding: 0 0 50px;
 }
 
-.saved-proj-footer h3 {
+.saved-proj-footer h3,
+.saved-proj-footer h5 {
     font-size: var(--h3s);
     color: var(--creamy);
     font-family: 'Ubuntu', sans-serif;
