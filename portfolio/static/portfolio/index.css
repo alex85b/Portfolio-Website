@@ -31,7 +31,7 @@
 }
 
 .who-am-i {
-  width: 900px;
+  width: 730px;
 }
 
 #welcome_section_container img {
@@ -55,7 +55,7 @@
 }
 
 #welcome_section_container .hello-line {
-  font-size: calc(var(--ps) + 1vw);
+  font-size: calc(var(--ps) + 10px);
   font-weight: 600;
 }
 
@@ -66,7 +66,7 @@
 .text {
   position: relative;
   color: var(--turquoise);
-  font-size: calc(var(--ps) + 1vw);
+  font-size: calc(var(--ps) + 10px);
 }
 
 .text.first-text {
