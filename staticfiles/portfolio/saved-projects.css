@@ -33,9 +33,16 @@
 
 .saved-proj-footer h3,
 .saved-proj-footer h5 {
-    font-size: var(--h3s);
     color: var(--creamy);
     font-family: 'Ubuntu', sans-serif;
+}
+
+.saved-proj-footer h3 {
+    font-size: var(--h3s);
+}
+
+.saved-proj-footer h5 {
+    font-size: var(--h5s);
 }
 
 .saved-proj-footer h3 span {

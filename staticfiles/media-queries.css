@@ -206,7 +206,12 @@
   }
 
   #welcome_section {
-    padding-top: 0;
+    padding: 0;
+  }
+
+  #welcome_section_container {
+    width: 80%;
+    max-width: 425px;
   }
 
   #projects_section ul {
@@ -269,9 +274,7 @@
   }
   
   #lower-navbar-elements ul {
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-evenly;
   }
 
   #lower-navbar-elements .navbar-link {
@@ -279,16 +282,16 @@
     padding: 0;
   }
 
-  #index-footer ul {
-    flex-direction: column;
-  }
-
-  #index-footer li:nth-child(1) {
-    padding-top: 15px;
+  #index-footer li{
+    padding: 10px 0 10px;
   }
 
   .project {
     flex: 0 0 80%;
+  }
+
+  .text {
+    font-size: var(--ps);
   }
 
   #welcome_section_container img {

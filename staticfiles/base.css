@@ -66,8 +66,8 @@ a {
 }
 
 body {
-  /* background-color: var(--creamy); */
-  background-color: crimson; /* Debug Color */
+  background-color: var(--creamy);
+  /* background-color: crimson;*//* Debug Color */
   height: 10px;
 }
 
